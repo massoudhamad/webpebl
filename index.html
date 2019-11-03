@@ -1,0 +1,433 @@
+
+<!-- <!DOCTYPE html>
+    <body>
+        <div>
+        The current date/time is <span id="dateTime"> </span>.
+        </div>
+        <script>
+        var dateTimeField = document.getElementById('dateTime');
+        dateTimeField.innerHTML = new Date();
+        </script>
+    </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<body>
+<input id="nameInput"></input>
+<p>
+Hello, <span id="nameField">guest</span>.
+<script>
+function nameHandler(e) {
+if (e.keyCode == 13) {
+var nameInput = document.getElementById('nameInput');
+var nameField = document.getElementById('nameField');
+nameField.innerHTML = nameInput.value;
+nameField.style.backgroundColor = 'cyan';
+nameField.style.textTransform = 'capitalize';
+}
+}
+document.addEventListener('keyup', nameHandler);
+</script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<div id="mouseOverMe"> Put the mouse here! </div> <p>
+    <div class="highlightText"> This is some text. </div> <p>
+    <div> This is some other text. </div> <p>
+    <div class="highlightText"> This text is important, too.</div>
+    <script>
+    function makeBold() {
+    var divs = document.getElementsByClassName('highlightText');
+    for (var i = 0; i < divs.length; i++) {
+    divs[i].style.color = 'red';
+    divs[i].style.fontWeight = 'bold';
+    }
+    }
+    function restore() {
+    var divs = document.getElementsByClassName('highlightText');
+    for (var i = 0; i < divs.length; i++) {
+    divs[i].style.color = 'black';
+    divs[i].style.fontWeight = 'normal';
+    }
+    }
+    var mouseOverMeDiv = document.getElementById('mouseOverMe');
+    mouseOverMeDiv.addEventListener('mouseover', makeBold);
+    mouseOverMeDiv.addEventListener('mouseout', restore);
+    </script>
+</html> -->
+
+
+<!-- $(“#name”).html(“Hello”);
+$(“#name”).append(“ World!”);
+$(“#name”).addClass(“greeting”);
+$(“#name”).hide();
+$(“#name”).show(); -->
+
+
+<!-- 
+<!DOCTYPE html>
+<head><script src="jquery.js"></script></head>
+<body>
+<button id="clickMe">Click Me!</button>
+<p>
+You've clicked the button <span id="numClicks">0 times</span>.
+<script>
+var clicks = 0;
+function clickHandler() {
+clicks++;
+var numClicksSpan = $('#numClicks');
+if (clicks == 1)
+numClicksSpan.html('once');
+else
+numClicksSpan.html(clicks + ' times');
+}
+$('#clickMe').click(clickHandler);
+</script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+    </head>
+        <body>
+        This is my first JavaScript web page.
+        <p>
+        <script>
+            document.write('The current date and time is ');
+            var time = new Date();
+            document.write(time);
+        </script>
+        </body>
+</html> -->
+
+
+
+
+<!-- <script>
+var age = 32;
+var name = 'Raya';
+var isMale = true;
+document.write("<br>");
+</script>
+
+ I am 
+<script>
+var age = 32;
+//alert(age);
+
+
+
+var id = 1254786;
+id = 'password';
+
+
+var a = 4;
+a++; //5
+var c = a - 3; //2 
+var d = c + 3 * a; //17
+var e = (c + 3) * a; //25
+
+
+var fname = 'Raya';
+var lname = 'Ahmada';
+
+var fullName= fname.concat(' ', lname); 
+var greeting = 'Hello , ' + fullName;
+
+console.log(greeting.toUpperCase()); //HELLO , RAYA AHMADA
+console.log(greeting.toLowerCase()); //hello , raya ahmada
+
+console.log(greeting.length); //19
+
+
+    
+var address = null;
+console.log(address); //null
+
+
+
+var salary;
+console.log(salary); //undefined
+
+
+var myArray = ['car', 12, false];
+var age = myArray[1];
+console.log(age); //12
+console.log(myArray[2]); //false
+console.log(myArray.length); //3
+
+
+var a = ['cat', 'dog', 'banana'];
+console.log(a[4]); //undefined
+console.log(a[-9]); //undefined
+
+
+var a = ['cat', 'dog', 'banana'];
+a[4] = 'panda';
+console.log(a[4]); //panda
+console.log(a[3]); //undefined
+a[-5] = 'elephant';
+console.log(a[-5]); //elephant
+console.log(a); //(5)["cat", "dog", "banana", empty, "panda", -5: "elephant"]
+
+console.log("End");
+
+var myArray = ['car', 'bike'];
+myArray.push('scooter');
+console.log(myArray); //(3) ["car", "bike", "scooter"]
+myArray.unshift('train');
+console.log(myArray); //(4) ["train", "car", "bike", "scooter"]
+
+console.log("End 2");
+
+
+var myArray = ['train', 'car', 'bike', 'scooter'];
+var vehicle = myArray.pop();
+console.log(vehicle); //scooter
+console.log(myArray); //(3) ["train", "car", "bike"]
+vehicle = myArray.shift();
+console.log(vehicle); //train
+console.log(myArray); //(2) ["car", "bike"]
+
+console.log('End 3');
+
+var person = {
+name: 'Raya Ahmada',
+age: 25,
+isMale: false,
+personality: ['patient', 'loyal', 'happy'],
+company: { name: 'SUZA', id: 2984 }
+}
+console.log(person.age); //25
+console.log(person['company'].id); //2984
+
+
+var max;
+if(a>b)
+{
+    max=a;
+}
+else
+{
+    max=b;
+}
+console.log(max);
+
+1 == '1' // true
+1 === '1' // false! different types
+
+
+var x; // undefined
+if (x) { . . . } // false! undefined is falsy
+x = 0;
+if (x) { . . . } // false! 0 is falsy
+x = 39;
+if (x) { . . . } // true! 39 is truthy
+var y = null;
+var z; // undefined
+if (y == z) { . . . } // true! falsy equals falsy
+if (y === z) { . . . } // false! different types
+
+
+
+var n = ...
+var factorial = 1;
+
+for (var i = 1; i <= n; i++) {
+factorial *= i;
+}
+
+var i = 1;
+while (i <= n) {
+factorial *= i;
+i++;
+}
+
+var i = 1;
+do {
+factorial *= i;
+i++;
+}
+while (i <= n);
+
+
+function factorial(n) {
+var product = 1;
+for (var i = 1; i <= n; i++) {
+product *= i;
+}
+return product;
+}
+var x = . . .
+var f = factorial(x);
+console.log(f);
+
+
+function tryToChange(x) {
+x = 4;
+}
+var y = 11;
+tryToChange(y);
+console.log(y); //11
+
+
+function changeMe(obj) {
+obj.age++;
+}
+var p = { age: 30 };
+changeMe(p);
+console.log(p.age); // now 31
+
+
+var add = function (a, b) {
+return a + b;
+};
+console.log(add(3, 5)); //8
+
+
+var rayaI = {
+name: 'Raya Ahmada',
+age: '32',
+greeting: function () {
+return 'Hello! Nice Meeting You!';
+}
+}
+console.log(rayaI.greeting());
+
+
+var name = 'toucan';
+name.length; // 6
+name.charAt(3); // ‘c’
+name[3]; // ‘c’
+
+
+
+var animal = 'cat';
+animal[0] = 'r';
+console.log(animal); // still ‘cat’
+
+
+
+var msg = 'programming in JavaScript is fun';
+msg.startsWith('programming'); //true
+msg.startsWith('PROGRAMMING'); // false
+
+msg.endsWith('is fun'); // true
+msg.includes('JavaScript'); // true
+
+var title = 'the title of my book';
+var start = title.search('title'); // 4
+start = title.search('banana'); // -1
+
+var status = 'I am working VERY hard';
+status.search(/VERY/); // 13
+status.search(/very/); // -1
+status.search(/very/i); // 13
+
+/script/.test('javascript is so much fun!'); // true
+
+
+var numbers = '5 8 2 5 7 6';
+numbers.search(/[012]/); //4
+/[012]/.test(numbers); //true
+
+
+
+var password = 'password4real';
+password.search(/[a-z]/); // 0
+password.search(/\d/); // 8
+
+
+var code = 'abc123d4e5';
+code.search(/[0-9][a-z][0-9]/); // 5
+
+
+var chars = 'abc123K456';
+chars.search(/[^0-9a-z]/); // 6
+
+
+
+/[a-z][0-9]?[a-z]/.test('a1b'); // true
+/[a-z][0-9]?[a-z]/.test('abc'); // true
+/[a-z][0-9]?[a-z]/.test('a123b');// false
+
+/[a-z][0-9]*[a-z]/.test('a123b'); //true
+
+
+/^[a-z][0-9]/.test('a1b'); //true
+/^[a-z][0-9]/.test('ab12'); //false
+/[a-z][a-z]$/.test('123abc'); // true
+/[a-z][a-z]$/.test('123abc456'); // false
+
+
+/^[a-z][0-9][a-z]$/.test('a1b'); // true
+/^[a-z][0-9][a-z]$/.test('a1b2c'); // false
+/^[a-z][0-9a-z]*[a-z]$/.test('a1b2c'); // true -->
+
+
+<!--</script>-->
+
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<div id="target">Toggle,Show or hide</div>
+<button type="button" id="btn-toggle">Toggle</button><button type="button" id="btn-hide">Hide</button>
+<button type="button" id="btn-show">Show</button>
+<script>
+$(function() {
+	$('#btn-toggle').click(function() {
+		// animation will take one second
+		$('#target').toggle(1000);
+	});
+});
+
+$(function() {
+	$('#btn-hide').click(function() {
+		// animation will take one second
+		$('#target').hide(1000);
+	});
+});
+
+$(function() {
+	$('#btn-show').click(function() {
+		// animation will take one second
+		$('#target').show(1000);
+	});
+});
+</script> -->
+
+
+
+You have accessed this page <span id="report"></span> times.
+<p>
+Your last visit was <span id="lastVisitDate"></span>.
+<script>
+var timesVisited = 0;
+var lastVisitDate = 'never';
+if (localStorage.lastVisit) {
+var lastVisit = JSON.parse(localStorage.lastVisit);
+timesVisited = lastVisit.numVisits;
+lastVisitDate = lastVisit.date;
+}
+document.getElementById('lastVisitDate').innerHTML = lastVisitDate;
+timesVisited++;
+document.getElementById('report').innerHTML = timesVisited;
+var myLastVisit = { }
+myLastVisit.date = new Date();
+myLastVisit.numVisits = timesVisited;
+localStorage.lastVisit = JSON.stringify(myLastVisit);
+</script>
+
+<script>
+var newPerson = JSON.parse(jsonString);
+$('#first-name-display').text(newPerson.firstName);
+$('#last-name-display').text(newPerson.lastName);
+
+
+var person = new Object();
+Person.firstname = 'Raya';
+person.lastName = 'Ahmada';
+Var jsonString = JSON.stringify(person)
+
+
+</script>
